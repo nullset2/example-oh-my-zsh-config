@@ -6,4 +6,6 @@ If you merge the contents of this file with your current .zshrc, it enables you 
 
 ![My Current Config](http://imgur.com/HCQvGfxl.png)
 
-Make sure that you have powerlevel9k and the base16 atelier forest dark colorscheme installed first!
+Make sure that you have powerlevel9k, a powerline patched font installed and assigned to your terminal, and the base16 atelier forest dark colorscheme installed first!
+
+(link to download prepatched font: https://github.com/gabrielelana/awesome-terminal-fonts/tree/patching-strategy/patched)
