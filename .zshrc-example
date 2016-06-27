@@ -1,46 +1,43 @@
-  export TERM="xterm-256color"
+export TERM="xterm-256color"
+export ZSH=/home/null/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-  ZSH_THEME="powerlevel9k/powerlevel9k"
-  POWERLEVEL9K_MODE='awesome-fontconfig'
-  POWERLEVEL9K_SHORTEN_DIR_LENGTH=5
-  POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-  POWERLEVEL9K_TODO_BACKGROUND="green"
-  POWERLEVEL9K_TODO_FOREGROUND="black"
-  POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="green"
-  POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="black"
-  POWERLEVEL9K_DIR_HOME_BACKGROUND="blue"
-  POWERLEVEL9K_DIR_HOME_FOREGROUND="black"
-  POWERLEVEL9K_STATUS_OK_BACKGROUND="black"
-  POWERLEVEL9K_STATUS_OK_FOREGROUND="green"
-  POWERLEVEL9K_STATUS_ERROR_BACKGROUND="black"
-  POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
-  POWERLEVEL9K_NVM_BACKGROUND="green"
-  POWERLEVEL9K_NVM_FOREGROUND="black"
-  POWERLEVEL9K_NVM_VISUAL_IDENTIFIER_COLOR="black"
-  POWERLEVEL9K_RVM_BACKGROUND="red"
-  POWERLEVEL9K_RVM_FOREGROUND="black"
-  POWERLEVEL9K_RVM_VISUAL_IDENTIFIER_COLOR="black"
-  POWERLEVEL9K_TIME_BACKGROUND="057"
-  POWERLEVEL9K_TIME_FOREGROUND="249"
-# enable the vcs segment in general
-  POWERLEVEL9K_SHOW_CHANGESET=true
-# just show the 6 first characters of changeset
-  POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
-  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('status' 'context' 'dir' 'vcs')
-  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('nvm' 'rvm' 'rspec_stats' 'time')
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-# Set personal aliases
-
-export PATH="/home/null/node_modules:$PATH"
-eval $(thefuck --alias)
-eval $(thefuck --alias f)
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=5
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+POWERLEVEL9K_TODO_BACKGROUND="green"
+POWERLEVEL9K_TODO_FOREGROUND="black"
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="green"
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="black"
+POWERLEVEL9K_DIR_HOME_BACKGROUND="blue"
+POWERLEVEL9K_DIR_HOME_FOREGROUND="black"
+POWERLEVEL9K_STATUS_OK_BACKGROUND="black"
+POWERLEVEL9K_STATUS_OK_FOREGROUND="green"
+POWERLEVEL9K_STATUS_ERROR_BACKGROUND="black"
+POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
+POWERLEVEL9K_NVM_BACKGROUND="red"
+POWERLEVEL9K_NVM_FOREGROUND="black"
+POWERLEVEL9K_NVM_VISUAL_IDENTIFIER_COLOR="black"
+POWERLEVEL9K_RVM_BACKGROUND="red"
+POWERLEVEL9K_RVM_FOREGROUND="black"
+POWERLEVEL9K_RVM_VISUAL_IDENTIFIER_COLOR="black"
+POWERLEVEL9K_TIME_BACKGROUND="057"
+POWERLEVEL9K_TIME_FOREGROUND="black"
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('status' 'context' 'dir' 'vcs')
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('rvm' 'rspec_stats' 'time')
+plugins=(rails ruby heroku git)
+export PATH=$PATH:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+source $ZSH/oh-my-zsh.sh
+alias claer=clear
+alias cklaer=clear 
+alias ckaer=clear
+alias caelr=clear
+alias clera=clear
+alias gphm="git push heroku master"
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:$HOME/scripts" #custom scripts path
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/workspace/go
