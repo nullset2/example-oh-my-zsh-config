@@ -1,4 +1,4 @@
-#Example Config
+# Example Config
 
 My current theme stuff using oh my zsh, saved here for future reference
 
